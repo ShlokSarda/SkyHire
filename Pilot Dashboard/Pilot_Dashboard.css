@@ -1,0 +1,223 @@
+body{
+  font-family: 'Heebo', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+}
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+.header{
+  background-color: black;
+  height:70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-container{
+  padding-top:5px;
+}
+
+.container{
+  padding:25px;
+  display: flex;
+  float: right;
+  color:white;
+  text-decoration: none;
+  justify-content: space-between;
+  gap: 50px;
+  margin-right: 3%;
+}
+
+.account-button{
+  cursor: pointer;
+  height:20px;
+}
+
+.dropdown-content{
+  display:none;
+  padding:5px;
+  position:absolute;
+  right:30px;
+  background-color: #e7e7e7;
+  min-width:max-content;
+  min-height: max-content;
+  z-index:1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: #6d6d6d;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  z-index: 1;
+  
+}
+
+.dropdown-content a:hover{
+  background-color: rgb(168, 168, 168);
+  color:black;
+}
+
+.button-container:hover .dropdown-content{
+  display:block;
+}
+
+.fa-solid{
+  margin-right: 5px;
+}
+
+.add-drone:hover,.button-container:hover{
+  color:#6d6d6d;
+}
+
+.main-container{
+  display: flex;
+  justify-content: space-between;
+  gap:10px;
+}
+
+.container1 {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  margin-left:5px;
+}
+  
+.container1-1, .container1-2 {
+  width: 100%;
+  height: 42vh; /* Adjust height as needed */
+}
+  
+  .pending-req{
+    height: 80%;
+  }
+  
+  .scrollable-list {
+    height: calc(100% - 60px); /* Adjust height for scrollable list */ 
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+  }
+  
+  .booking {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .accept-button, .decline-button {
+    width: 100px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .accept-button:hover, .decline-button:hover {
+    background-color: grey;
+  }
+
+
+  .Scheduled-bookings{
+    height: 80%;
+    margin-left: 10px;
+  }
+
+/* Calender */
+.wrapper{
+  width:50%;
+  display: block;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+header .icons{
+  display: flex;
+}
+header .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 0.8rem;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child{
+  margin-right: -10px;
+}
+header .icons span:hover{
+  background: black;
+}
+header .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar{
+  margin-left: -20px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background: black;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
+
