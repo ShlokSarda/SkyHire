@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    
+    <title>SkyHire</title>
+</head>
+<body id="top" class="top">
+    <!--
+        Header
+    -->
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#">
+                <img src="./assets/images/drone_02.png" style="margin-left: 25px;">
+            </a>
+            
+            <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+                <ion-icon name="menu-outline" class="open"></ion-icon>
+                <ion-icon name="close-outline" class="close"></ion-icon>
+            </button>
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li>
+                        <a href="#home" class="navbar-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#fly" class="navbar-link">Fly</a>
+                    </li>
+                    <li>
+                        <a href="#rent" class="navbar-link">Rent</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link">About &#9662;</a>
+                        <div class="dropdown-content">
+                            <a href="./AboutUs.html">About us</a>
+                            <a href="./SkyHire_Works.html">How SkyHire works</a>
+                            <a href="./impact.html">Impact</a>
+                            <a href="./Offerings.html">Our offerings</a>
+                        </div>
+                    </li>
+                    
+                    </li>
+                </ul>
+                <button class="btn btn-primary" id="myBtn1">Sign In</button>
+                <div id="myModal1" class="modal">
+                    <div class="modal-content">
+                        <span class="close1">&times;</span>
+                        <div class="content">
+                            <div class="content-1">
+                                <a href="./Customer/SignIn.html">Sign In to Book <i class="fa-solid fa-arrow-right"></i></a>
+                                <hr style="width:100%; color:black; margin-top: 30px;">
+                            </div>
+                            <div class="content-1">
+                                <a href="./Host/SignIn.html">Sign In as Host <i class="fa-solid fa-arrow-right"></i></a>
+                                <hr style="width:100%; color:black; margin-top: 30px;">
+                            </div>
+                            <div class="content-1">
+                                <a href="./Pilot/SignIn.html">Sign In as Pilot <i class="fa-solid fa-arrow-right"></i></a>
+                                <hr style="width:100%; color:black; margin-top: 30px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-secondary" id="myBtn2">Sign Up</button>
+                <div id="myModal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close1">&times;</span>
+                        <div class="content">
+                            <div class="content-1">
+                                <a href="./Customer/SignUp.html">Sign Up to Book <i class="fa-solid fa-arrow-right"></i></a>
+                                <hr style="width:100%; color:black; margin-top: 30px;">
+                            </div>
+                            <div class="content-1">
+                                <a href="./Host/SignUp.html">Sign Up as Host <i class="fa-solid fa-arrow-right"></i></a>
+                                <hr style="width:100%; color:black; margin-top: 30px;">
+                            </div>
+                            <div class="content-1">
+                                <a href="./Pilot/SignUp.html">Sign Up as Pilot <i class="fa-solid fa-arrow-right"></i></a>
+                                <hr style="width:100%; color:black; margin-top: 30px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--
+        Home
+    -->
+    <section class="home" id="home">
+       <img class="img-1" src="./assets/images/black-background.jpg" style="position: relative; object-fit: cover;"> 
+        <div class="container1">
+            <div class="cont1">
+                <h2>Request a drone now</h2>
+                <div class="subcont1 search-container">
+                    <label for="location" class="location">Enter Location</label>
+                    <div class="input-container">
+                        <input type="list" id="pickup" class="pickup" name="pickup" style="padding: 0 3%; padding-right: 30px;" placeholder="Enter your Location">
+                        <i class="fa-solid fa-location-arrow current-location" ></i>
+                    </div>
+                    <ul class="autocomplete-results" id="autocomplete-results"></ul>
+                </div>
+                <div class="subcont1">
+                    <label for="date" class="date">Schedule to</label>
+                    <input type="date" id="date" name="date" style="padding: 0 3%;">
+                </div>
+                <div class="subcont2">
+                    <button class="request" style="font-weight: 500;">Request Now<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+    </section>
+    
+    <!--
+        Fly
+    -->
+    <section class="fly" id="fly">
+        <div class="container2">
+            <div class="cont2-1"></div>
+                    <img class="img-2" src="./assets/images/business.jpg">
+            <div class="cont2-2">
+                <h1>The Drone you know, reimagined for business</h1>
+                <p>You may have heard of software-as-a-service (SaaS), infrastructure-as-a-service (IaaS), and platform-as-a-service (PaaS), but have you heard of drone-as-a-service (DaaS)?</p>
+                <div class="button" style="margin-left: 5%;">
+                    <button>Get Started <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div> 
+        </div>
+    </section>
+    
+    <!--
+        Rent a Drone
+    -->
+    <section class="rent" id="rent">
+        <div class="container3">
+            <div class="cont3-2">
+                <h1>Monetize Your Drone<br>Rent It Out for Profit</h1>
+                <p>Tap into a vast network of drone enthusiasts and boost your weekly earnings with our comprehensive rental management platform. Join today and leverage our powerful tools to maximize your profits in the drone rental market.</p>
+                <div class="button">
+                    <button>Get Started <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div> 
+            <div class="cont3-1">
+                <img class="img-2" src="./assets/images/rent.jpg">
+            </div>
+        </div>
+    </section>
+    
+
+    <!--
+        Footer
+    -->
+    <footer>
+        <div class="content-footer">
+          <div class="top">
+            <div class="logo-details">
+                <i class="fa-brands fa-phoenix-squadron"></i>
+              <span class="logo_name">SkyHire</span>
+            </div>
+            <div class="media-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="link-boxes">
+            <ul class="box">
+              <li class="link_name">Company</li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Get started</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Services</li>
+              <li><a href="#">Drone Rental</a></li>
+              <li><a href="#">Flying Drone</a></li>
+              <li><a href="#">Rent Your Drones</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Account</li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">My account</a></li>
+              <li><a href="#">Prefrences</a></li>
+              <li><a href="#">Purchase</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Applications</li>
+              <li><a href="#">Photography</a></li>
+              <li><a href="#">Agriculture</a></li>
+              <li><a href="#">Surveying</a></li>
+              <li><a href="#">Inspection</a></li>
+            </ul>
+            <ul class="box input-box">
+              <li class="link_name">Subscribe</li>
+              <li><input type="text" placeholder="Enter your email"></li>
+              <li><input type="button" value="Subscribe"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-details">
+          <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2024 <a href="#">SkyHire.</a>All rights reserved</span>
+            <span class="policy_terms">
+              <a href="#">Privacy policy</a>
+              <a href="#">Terms & condition</a>
+            </span>
+          </div>
+        </footer>
+    <!--
+        Go to Top
+    -->
+    <a href="#top" class="go-top" data-go-top aria-label="Go To Top">
+        <ion-icon name="chevron-up-outline"></ion-icon>
+    </a>
+
+    <script src="./assets/javascript/index.js"></script>
+    <script src="https://kit.fontawesome.com/733c9511cd.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>How SkyHire Works</title>
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-top: 10px;
+            
+        }
+        .step {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        .step img {
+            width: 400px;
+            margin-right: 20px;
+        }
+        .step-details {
+            flex: 1;
+            border-left: 2px solid #7c7c7c;
+            padding-left: 20px;
+        }
+        .step-no {
+            color: #777;
+        }
+        .step-title {
+            color: #000;
+            font-weight: bold;
+        }
+        .button-container {
+            display: flex;
+            margin-left: 130px;
+        }
+        .button {
+            background-color: #000;
+            font-family: Montserrat, sans-serif;
+            
+
+            color: #fff;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 7px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #333;
+        }
+        .Signup {
+            background-color: #f8f8f8; /* Light gray background color */
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 50px;
+            
+        }
+        .Signup h2 {
+            color: #333;
+            font-size: 26px;
+            margin-bottom: 10px;
+            margin-left: 130px;
+            
+        }
+        .Signup p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 20px;
+            margin-left: 130px;
+            
+        }
+        .header {
+            background: black;
+            padding-block: 10px;
+            height: 70px;
+            overflow: hidden;
+            z-index:9;
+            width:100%;
+            transition: 0.25s cubic-bezier(0.33, 0.85, 0.56, 1.02);
+        }
+    </style>
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="header-container">
+            <a href="#">
+                <img src="./assets/images/drone_02.png" style="margin-left: 25px;">
+            </a>
+        </div>
+    </header>
+<div class="container">
+    <h1>How SkyHire Works</h1>
+    <p>Our core service is developing technology that connects Hosts and Users on demand. Here’s how the website works, step by step:<br><br></p>
+    <div class="step">
+        <img src="./assets/images/1.png" alt="Step 1">
+        <div class="step-details">
+            <span class="step-no">Step 1</span>
+            <h2 class="step-title">User Authentication</h2>
+            <p>The User logs in or signs up to access services ensuring security and personalized experience.</p>
+        </div>
+    </div>
+
+   <div class="step">
+        <img src="./assets/images/2.png" alt="Step 2">
+        <div class="step-details">
+            <span class="step-no">Step 2</span>
+            <h2 class="step-title">Drone Selection</h2>
+            <p>Users choose the desired drone type and pickup/dropoff locations and the desired rental period.
+            A request is placed at the Host side which gets confirmed within 12 Hrs</p>
+        </div>
+    </div><br>
+
+    <div class="step">
+        <img src="./assets/images/3.png" alt="Step 3">
+        <div class="step-details">
+            <span class="step-no">Step 3</span>
+            <h2 class="step-title">Host Confirmation and Notification</h2>
+            <p>Hosts confirm rental requests within 12 hours, triggering a confirmation message 
+                ensuring timely acknowledgment and booking confirmation.
+            </p>
+        </div>
+    </div><br>
+
+    <div class="step">
+        <img src="./assets/images/4.png" alt="Step 4">
+        <div class="step-details">
+            <span class="step-no">Step 4</span>
+            <h2 class="step-title">Drone Pickup</h2>
+            <p>The designated drone pilot arrives at the pickup location, and the rental duration begins</p>
+        </div>
+    </div><br>
+
+    <div class="step">
+        <img src="./assets/images/5.png" alt="Step 5">
+        <div class="step-details">
+            <span class="step-no">Step 5</span>
+            <h2 class="step-title">Drone Usage</h2>
+            <p>Marks the commencement of drone usage for the specified purpose.Users pay the rental fee for the drone usage.
+                Completes the transaction for the service provided.
+
+            </p>
+        </div>
+    </div><br>
+
+    <div class="step">
+        <img src="./assets/images/6.png" alt="Step 6">
+        <div class="step-details">
+            <span class="step-no">Step 6</span>
+            <h2 class="step-title">Ratings and Reviews</h2>
+            <p>Both host and User provide reviews and feedback. 
+            Enhances service quality and user experience through feedback loops.
+            </p>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+</div>
+    <div class="Signup">
+        <h2>Sign Up Today</h2>
+        <p>Ready To experience Drone Rental for yourself? Take your first drone rental or rent your drone as a Host.</p>
+        <div class="button-container">
+            <button class="button">Sign Up as User</button>
+            <button class="button">Sign Up as Host</button><br><br>
+        </div>
+    </div>
+</body>
+</html>

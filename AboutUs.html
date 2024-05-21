@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<title>About Us | SkyHire</title>
+<style>
+  body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+    .topnav {
+        overflow: hidden;
+        background-color: #000000;
+        }
+
+        .topnav a.no-effect:hover{
+            color: white;
+            background-color: black;
+            font-size: 26px;
+        }
+        .topnav a {
+        float: left;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px 22px;
+        text-decoration: none;
+        font-size: 20px;
+        }
+
+        .topnav a:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(85, 85, 85);
+        border-radius: 60px;
+        }
+
+
+        .topnav a.split {
+        float: right;
+        background-color: #000000;
+        color: white;
+        }
+
+        .topnav a.split:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(85,85,85);
+        border-radius: 70px;
+        }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .column {
+    width: 48%;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 30%; /* Adjusted width to accommodate three icons in a row */
+  }
+  .icon img {
+    width: 80px;
+    margin-right: 10px;
+  }
+  .products-row {
+    display: flex;
+    justify-content: center; /* Center-align the products */
+    margin-top: 20px;
+  }
+  .product {
+    width: 30%;
+    text-align: center; /* Center-align the text */
+    margin: 0 10px; /* Add margin for spacing between products */
+  }
+  .product img {
+    width: 80px;
+  }
+  .header {
+    background: black;
+    padding-block: 10px;
+    height: 70px;
+    overflow: hidden;
+    z-index:9;
+    width:100%;
+    transition: 0.25s cubic-bezier(0.33, 0.85, 0.56, 1.02);
+   }
+
+   footer{
+    position: relative;
+    background: #000000;
+    width: 100%;
+    margin-top: 120px;
+    bottom: 0;
+    left: 0;
+  }
+  footer::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100px;
+    height: 1px;
+    width: 100%;
+    background: #AFAFB6;
+  }
+  footer .content-footer{
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 40px 40px 40px;
+  }
+  footer .content-footer .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  .content-footer .top .logo-details{
+    color: #fff;
+    font-size: 30px;
+  }
+  .content-footer .top .media-icons{
+    display: flex;
+  }
+  .content-footer .top .media-icons a{
+    height: 40px;
+    width: 40px;
+    margin: 0 8px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+  }
+  .top .media-icons a:nth-child(1){
+    background: #4267B2;
+  }
+  .top .media-icons a:nth-child(1):hover{
+    color: #4267B2;
+    background: #fff;
+  }
+  .top .media-icons a:nth-child(2){
+    background: #1DA1F2;
+  }
+  .top .media-icons a:nth-child(2):hover{
+    color: #1DA1F2;
+    background: #fff;
+  }
+  .top .media-icons a:nth-child(3){
+    background: #ff4281;
+  }
+  .top .media-icons a:nth-child(3):hover{
+    color: #ff4281;
+    background: #fff;
+  }
+  .top .media-icons a:nth-child(4){
+    background: #0077B5;
+  }
+  .top .media-icons a:nth-child(4):hover{
+    color: #0077B5;
+    background: #fff;
+  }
+  .top .media-icons a:nth-child(5){
+    background: #FF0000;
+  }
+  .top .media-icons a:nth-child(5):hover{
+    color: #FF0000;
+    background: #fff;
+  }
+  footer .content-footer .link-boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .content-footer .link-boxes .box{
+    width: calc(100% / 5 - 10px);
+  }
+  .content-footer .link-boxes .box .link_name{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .link-boxes .box .link_name::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 35px;
+    background: white;
+  }
+  .content-footer .link-boxes .box li{
+    margin: 6px 0;
+    list-style: none;
+  }
+  .content-footer .link-boxes .box li a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.4s ease
+  }
+  .content-footer .link-boxes .box li a:hover{
+    opacity: 1;
+    text-decoration: underline;
+  }
+  .content-footer .link-boxes .input-box{
+    margin-right: 55px;
+  }
+  .link-boxes .input-box input{
+    height: 40px;
+    width: calc(100% + 55px);
+    outline: none;
+    border: 2px solid #AFAFB6;
+    background: #000000;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 5px;
+  }
+  .link-boxes .input-box input::placeholder{
+    color: #AFAFB6;
+    font-size: 16px;
+  }
+  .link-boxes .input-box input[type="button"]{
+    background: #fff;
+    color: #000000;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 4px 0;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  .input-box input[type="button"]:hover{
+    opacity: 1;
+  }
+  footer .bottom-details{
+    width: 100%;
+    background: #000000;
+  }
+  footer .bottom-details .bottom_text{
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+  .bottom-details .bottom_text a:hover{
+    opacity: 1;
+    text-decoration: underline;
+  }
+  .bottom-details .bottom_text a{
+    margin-right: 10px;
+  }
+  @media (max-width: 900px) {
+    footer .content-footer .link-boxes{
+      flex-wrap: wrap;
+    }
+    footer .content-footer .link-boxes .input-box{
+      width: 40%;
+      margin-top: 10px;
+    }
+  }
+  @media (max-width: 700px){
+    footer{
+      position: relative;
+    }
+    .content-footer .top .logo-details{
+      font-size: 26px;
+    }
+    .content-footer .top .media-icons a{
+      height: 35px;
+      width: 35px;
+      font-size: 14px;
+      line-height: 35px;
+    }
+    footer .content-footer .link-boxes .box{
+      width: calc(100% / 3 - 10px);
+    }
+    footer .content-footer .link-boxes .input-box{
+      width: 60%;
+    }
+    .bottom-details .bottom_text span,
+    .bottom-details .bottom_text a{
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 520px){
+    footer::before{
+      top: 145px;
+    }
+    footer .content-footer .top{
+      flex-direction: column;
+    }
+    .content-footer .top .media-icons{
+      margin-top: 16px;
+    }
+    footer .content-footer .link-boxes .box{
+      width: calc(100% / 2 - 10px);
+    }
+    footer .content-footer .link-boxes .input-box{
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="header-container">
+            <a href="#">
+                <img src="./assets/images/drone_02.png" style="margin-left: 25px;">
+            </a>
+        </div>
+    </header>
+    
+
+<div class="container">
+  <h1>About Us</h1>
+  <p style="position: relative; padding: 300px; background-image: url(./assets/images/cover.jpg); background-size: cover;"></p>
+  <p>Changing how people can rent drones and use them for their purposes instead of buying them.</p>
+  <h1>Our Vision</h1>
+  <p> At SkyHire, we envision a world where the boundless skies are within reach of every individual's imagination. We strive to be the catalyst for this vision, democratizing access to aerial exploration and empowering individuals to transcend traditional boundaries. Through innovation, community, and a relentless pursuit of excellence, we aspire to redefine the possibilities of flight and inspire a new era of discovery and wonder. Join us as we soar towards a future where the sky is not just the limit, but a limitless canvas for dreams to take flight.</p>
+
+  <h1>What we do</h1>
+  <div class="columns">
+    <div class="column">
+      <p>The web application, Drone Rental Service stands as a testament to the evolution of drone technology, offering a groundbreaking approach to drone rental services. Functioning as a middleware platform, it establishes a seamless connection between drone hosts and prospective customers.Intuitive and user-friendly booking system allowing renters to reserve drones for specific dates, durations, and purposes.
+    </p>
+    </div>
+    <div class="column">
+      <p>A comprehensive catalog of available drones, including details such as specifications, rental pricing, and user ratings.
+        technology addresses the growing demand for automated and efficient drone services across industries such as agriculture, surveillance, logistics, and disaster management. The primary objective is to develop a robust and scalable platform that provides end-to-end drone services through a user-friendly interface.</p>
+    </div>
+  </div><br><br>
+
+  <div class="applications">
+    <h2>Applications</h2><br>
+    <div class="columns">
+      <div class="icon">
+        <img src="./assets/images/camera-drone.png" alt="Aerial Photography and Videography">
+        <p>Aerial Photography and Videography</p>
+      </div>
+      <div class="icon">
+        <img src="./assets/images/conservation.png" alt="Widlife Conservation">
+        <p>Widlife Conservation</p>
+      </div>
+      <div class="icon">
+        <img src="./assets/images/forest.png" alt="Land Surveying">
+        <p>Land Surveying</p>
+      </div>
+      <div class="icon">
+        <img src="./assets/images/structural.png" alt="Infrastruction Inspection">
+        <p>Infrastructure Inspection</p>
+      </div>
+      <div class="icon">
+        <img src="./assets/images/inspection.png" alt="Property Inspection">
+        <p>Property Inspection</p>
+      </div>
+      <div class="icon">
+        <img src="./assets/images/precision.png" alt="Precision Farming">
+        <p>Precision Farming</p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+    <div class="content-footer">
+      <div class="top">
+        <div class="logo-details">
+            <i class="fa-brands fa-phoenix-squadron"></i>
+          <span class="logo_name">SkyHire</span>
+        </div>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Company</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Get started</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Services</li>
+          <li><a href="#">Drone Rental</a></li>
+          <li><a href="#">Flying Drone</a></li>
+          <li><a href="#">Rent Your Drones</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Account</li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">My account</a></li>
+          <li><a href="#">Prefrences</a></li>
+          <li><a href="#">Purchase</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Applications</li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Agriculture</a></li>
+          <li><a href="#">Surveying</a></li>
+          <li><a href="#">Inspection</a></li>
+        </ul>
+        <ul class="box input-box">
+          <li class="link_name">Subscribe</li>
+          <li><input type="text" placeholder="Enter your email"></li>
+          <li><input type="button" value="Subscribe"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2024 <a href="#">SkyHire.</a>All rights reserved</span>
+        <span class="policy_terms">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms & condition</a>
+        </span>
+      </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/733c9511cd.js" crossorigin="anonymous"></script>
+</body>
+</html>
