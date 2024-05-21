@@ -1,9 +1,9 @@
 <?php
     session_start();
     $postData = file_get_contents("php://input");
-    $servername = "ep-aged-glitter-a46hdm97-pooler.us-east-1.aws.neon.tech";  // Change this to your database server
-    $username = "default";     // Change this to your database username
-    $password = "3GtW0VklBLEm";     // Change this to your database password
+    $servername = "localhost";  // Change this to your database server
+    $username = "root";     // Change this to your database username
+    $password = "";     // Change this to your database password
     $dbname = "skyhire";  // Change this to your database name
 // If the POST data is not empty
 if (!empty($postData)) {
