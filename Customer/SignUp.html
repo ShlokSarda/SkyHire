@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyHire - Sign Up</title>
+    <link rel="stylesheet" href="./SignUp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+    <script src="https://kit.fontawesome.com/733c9511cd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="header-container">
+            <a href="#">
+                <img src="..\assets\images\drone_02.png" style="margin-left: 25px;">
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <div id="sender">
+            <h2>What's your phone number ?</h2>
+            <input type="text" id="number-email" name="number-email" placeholder="Enter phone number">
+            <div id="number-usage">Number already in use.</div>
+            <div id="recaptcha-container"></div>
+            <input type="button" id="send" value="Continue" onclick="authenticate()">
+        </div>
+        <div id="verifier" style="display: none;">
+            <h2 id="main"></h2>
+            <div class="verifier">
+                <p id="change-number">Want to change your mobile number ?</p>
+            </div>
+            <input type="text" maxlength="6" id="verificationcode" placeholder="Enter 6-digit Code">
+            <div class="n-conf">The SMS passcode you've entered is incorrect.</div>
+            <div class="resend-verify">
+                <div class="resend">
+                    <button id="resend" onclick="resendOTP()" disabled>Resend Code</button>
+                </div>
+                <div class="verify">
+                    <button id="verify" onclick="codeverify()">Next <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="details" style="display:none;">
+            <h2 style="font-size: 30px;">What's your name?</h2>
+            <p>Let us know how to properly address you.</p>
+            <div class="name">
+                <input type="text" id="firstname" name="firstname" placeholder="Please enter first name" required>
+                <input type="text" id="lastname" name="lastname" placeholder="Please enter last name" required>
+            </div>
+            <button id="verify" onclick="doPost()">Next <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+    <script src="./SignUp.js"></script>
+</body>
+</html>

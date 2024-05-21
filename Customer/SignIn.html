@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyHire - Sign In</title>
+    <link rel="stylesheet" href="./SignIn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="header-container">
+            <a href="#">
+                <img src="..\assets\images\drone_02.png" style="margin-left: 25px;">
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <div id="sender">
+            <h2>What's your phone number ?</h2>
+            <input type="text" id="number-email" placeholder="Enter phone number">
+            <div id="number-usage">Phone Number is not registered.</div>
+            <div id="recaptcha-container"></div>
+            <input type="button" id="send" value="Continue" onclick="authenticate()">
+        </div>
+        <div id="verifier" style="display: none;">
+            <h2 id="main"></h2>
+            <div class="verifier">
+                <p id="change-number">Want to change your mobile number?</p>
+            </div>
+            <input type="text" maxlength="6" id="verificationcode" placeholder="Enter 6-digit Code">
+            <div class="n-conf">The SMS passcode you've entered is incorrect.</div>
+            <div class="resend-verify">
+                <div class="resend">
+                    <button id="resend" onclick="resendOTP()" disabled>Resend Code</button>
+                </div>
+                <div class="verify">
+                    <button id="verify" onclick="codeverify()">Next <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/733c9511cd.js" crossorigin="anonymous"></script>
+<script src="./SignIn.js"></script>
+</html>

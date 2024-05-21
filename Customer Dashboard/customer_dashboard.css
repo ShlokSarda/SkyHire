@@ -1,0 +1,171 @@
+
+body {
+  font-family: Montserrat, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+}
+.header{
+background-color: black;
+height:70px;
+display: flex;
+justify-content: space-between;
+}
+
+.header-container{
+padding-top:5px;
+}
+
+.container{
+padding:25px;
+display: flex;
+float: right;
+color:white;
+text-decoration: none;
+justify-content: space-between;
+gap: 50px;
+margin-right: 3%;
+}
+
+.account-button{
+cursor: pointer;
+height:20px;
+}
+
+.dropdown-content{
+display:none;
+padding:5px;
+position:absolute;
+right:30px;
+background-color: #e7e7e7;
+min-width:max-content;
+min-height: max-content;
+z-index:999;
+border-radius: 5px;
+}
+.button-container a:hover{
+  color:grey;
+}
+.dropdown-content a {
+color: #000000;
+padding: 10px;
+text-decoration: none;
+display: block;
+z-index: 1;
+
+}
+
+.dropdown-content a:hover{
+background-color: rgb(168, 168, 168);
+color:black;
+}
+
+.button-container:hover .dropdown-content{
+display:block;
+}
+.button-container:hover{
+  color:grey;
+}
+.fa-solid{
+margin-right: 5px;
+}
+
+.trips{
+color:#ffffff;
+text-decoration: none;
+}
+
+  .home-section {
+    display: block;
+    position: relative;
+    background-color: #ffffff00;
+    min-height: 100vh;
+  }
+
+  .home-section .text {
+    display: flex;
+    flex-direction: column;
+    color: #11101d;
+    font-size: 20px; 
+    margin-top: 10px; 
+    background-color: #ffffff00; 
+    padding-top: 5px; 
+    border-radius: 8px;
+  
+  }
+
+  input {
+    width: 90%;
+    margin-top: 3px; 
+    margin-bottom: 15px; 
+    padding: 8px; 
+  }
+
+
+  .home-section .new {
+    width: 25%;
+    margin: 30px 5px 0 25px;
+    border: 0.5px solid rgb(234, 234, 234);
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    justify-content: space-around;
+  }
+
+ 
+
+
+  .home-section .new button {
+    background-color: black;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 20px; 
+    font-weight: 500;
+    width: 95%;
+    padding: 10px; 
+    margin-bottom: 5px; 
+  }
+
+  .home-section .new button:hover {
+    background-color: grey;
+    color: black;
+  }
+
+  @media (max-width: 420px) {
+    .sidebar li .tooltip {
+      display: block;
+    }
+  }
+
+  a {
+      color: white;
+      text-decoration: none;
+  }
+
+  .home-section .text h2 {
+    margin-top: 0;}
+
+    #map {
+
+          height: 82vh;
+          width: 70vw;
+          position: absolute;
+          top: 115px; ; right: 10.5px; bottom: 0;
+          
+      }
+
+      #pilot {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+      }
+    
+      #pilot .label{
+        margin-left: 0;
+
+      }
+
+      
