@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./add_drone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Add Drone</title>
+</head>
+
+
+<body>
+    <header class="header" data-header>
+        <div class="header-container">
+            <a href="#">
+                <img src="../assets/images/drone_02.png" style="margin-left: 25px;">
+            </a>
+        </div>
+    </header>  
+        <div class="container">
+            <h2>Add Drone</h2>
+            <form action="./add_drone.php" method="post">
+                <div class="form-group">
+                    <label for="drone-name">Drone Name</label>
+                    <input type="text" id="drone-name" name="drone-name">
+                </div>
+                <div class="form-group">
+                    <label for="drone-type">Drone Type</label>
+                    <input type="text" id="drone-type" name="drone-type">
+                </div>
+                <div class="form-group">
+                    <label for="drone-model">Drone Model</label>
+                    <input type="text" id="drone-model" name="drone-model">
+                </div>
+                <div class="form-group">
+                    <label for="drone-certificate">Certificate</label>
+                    <input type="file" id="certificate" name="certificate" accept="image/*, .pdf" required>
+                </div>
+                <div class="form-group">
+                    <label for="drone-description">Description</label>
+                    <input type="text" name="drone-description" name="drone-description"maxlength="100">
+                    <p id="wordCount"></p>
+                </div>
+                <button type="submit">Add Drone</button>
+            </form>
+        </div>
+    </body>
+    </html>
+    

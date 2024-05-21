@@ -1,0 +1,211 @@
+
+     body {
+        font-family: Montserrat, sans-serif;
+        padding: 0;
+        margin: 0;
+        background-color: #ffffff;
+     }
+.header{
+      background-color: black;
+      height:70px;
+      display: flex;
+      justify-content: space-between;
+      
+    }
+    
+    .header-container{
+      padding-top:5px;
+    }
+    
+    .container{
+      padding:25px;
+      display: flex;
+      float: right;
+      color:white;
+      text-decoration: none;
+      justify-content: space-between;
+      gap: 50px;
+      margin-right: 3%;
+    }
+    
+    .account-button{
+      cursor: pointer;
+      height:20px;
+    }
+    
+    .dropdown-content{
+      display:none;
+      padding:5px;
+      position:absolute;
+      right:30px;
+      background-color: #e7e7e7;
+      min-width:max-content;
+      min-height: max-content;
+      z-index:1;
+      border-radius: 5px;
+    }
+    
+    .dropdown-content a {
+      color: #000000;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+      z-index: 1;
+      
+    }
+    
+    .dropdown-content a:hover{
+      background-color: rgb(168, 168, 168);
+      color:black;
+    }
+    
+    .button-container:hover .dropdown-content{
+      display:block;
+    }
+    
+    .fa-solid{
+      margin-right: 5px;
+    }
+    
+    .trips{
+      color:#ffffff;
+      text-decoration: none;
+    }
+
+
+        .container-s{
+        max-width: 900px;
+        background: #fff;
+        border-radius: 6px;
+        margin-top: 40px;
+        margin-left: 10%;
+        padding: 20px 60px 5px 40px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .container-s .content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        .container-s .content .left-side{
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        position: relative;
+        }
+        .content .left-side::before{
+        content: '';
+        position: absolute;
+        height: 80%;
+        width: 1px;
+        right: 15px;
+       
+        top: 50%;
+        transform: translateY(-50%);
+        background: #afafb6;
+        }
+        .content .left-side .details{
+        margin: 15px;
+        text-align: center;
+        }
+        .content .left-side .details i{
+        font-size: 30px;
+        color: #000000;
+        margin-bottom: 10px;
+        }
+        .content .left-side .details .topic{
+        font-size: 18px;
+        font-weight: 500;
+        }
+        .content .left-side .details .text-one,
+        .content .left-side .details .text-two{
+        font-size: 14px;
+        color: #afafb6;
+        }
+        .container .content .right-side{
+        width: 75%;
+        margin-left: 75px;
+        }
+        .content .right-side .topic-text{
+        font-size: 23px;
+        font-weight: 600;
+        color: #000000;
+        }
+        .right-side .input-box{
+        height: 50px;
+        width: 100%;
+        margin: 12px 0;
+        }
+        .right-side .input-box input,
+        .right-side .input-box textarea{
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background: #F0F1F8;
+        border-radius: 6px;
+        padding: 0 15px;
+        resize: none;
+        }
+        .right-side .message-box{
+        min-height: 110px;
+        }
+        .right-side .input-box textarea{
+        padding-top: 6px;
+        }
+        .right-side .button{
+        display: inline-block;
+        margin-top: 12px;
+        }
+        .right-side .button input[type="button"]{
+        color: #fff;
+        font-size: 18px;
+        outline: none;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #000000;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        }
+        .button input[type="button"]:hover{
+        background: #000000;
+        }
+        @media (max-width: 950px) {
+        .container-s{
+            width: 90%;
+            padding: 30px 40px 40px 35px ;
+        }
+        .container-s .content .right-side{
+        width: 75%;
+        margin-left: 55px;
+        }
+        }
+        @media (max-width: 820px) {
+        .container-s{
+            margin: 40px 0;
+            height: 100%;
+        }
+        .container-s .content{
+            flex-direction: column-reverse;
+        }
+        .container-s .content .left-side{
+        width: 100%;
+        flex-direction: row;
+        margin-top: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+        .container-s .content .left-side::before{
+        display: none;
+        }
+        .container-s .content .right-side{
+        width: 100%;
+        margin-left: 0;
+        }
+    }

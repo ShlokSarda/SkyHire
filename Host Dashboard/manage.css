@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+header .topnav {
+    background-color: black;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+
+
+header .topnav h2 {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+}
+
+.sidenav {
+    height: 115%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 70px;
+    left: 0;
+    background-color: #f6f6f6;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 10px 8px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    border-left: 5px solid transparent;
+}
+
+.sidenav a:hover {
+    border-left-color: rgb(0, 0, 0);
+    background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+.sidenav a.active {
+    border-left-color: rgb(0, 0, 0);
+    background-color: #ddd; /* Grey background for selected link */
+}
+
+.content {
+    margin-left: 220px;
+    /*padding: 20px;*/
+    background: white;
+    overflow-y: auto; /* Allow content to be scrollable */
+}
+
+.edit-form {
+    display: none;
+}
+
+.content button{ 
+    background-color: #000;
+    font-family: Montserrat, sans-serif;
+    
+
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.content button:hover {
+    background-color: #333;
+}
+
+.cancel {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
