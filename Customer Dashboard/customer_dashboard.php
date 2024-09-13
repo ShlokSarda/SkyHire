@@ -94,7 +94,7 @@ session_start();
 
   <div class="home-section" id="booknow">
     <div class="text">
-        <div class="new" style="border-color: #11101d;">
+        <div class="new">
             <h2>Get A Drone</h2>
             <div class="subcont1 search-container">
             <div class="label">
@@ -136,18 +136,22 @@ session_start();
               <span class="light-text">(hrs)</span>
           </div>
           <div class="input">
-              <input type="number" id="hours" name="hours" min="1" max="13" placeholder="Select Number of Hours">
+              <input type="number" id="hours" name="hours" min="1" max="13" placeholder="Enter Number of Hours">
           </div>
           <div class="label">
             <label>Do You Need A Pilot?</label><br>
-            <div id="pilot">
-            <input type="radio" id="with_pilot" name="pilot" value="yes">
-            <label for="with_pilot" >Yes</label>
-            <input type="radio" id="without_pilot" name="pilot" value="no">
-            <label for="without_pilot" >No </label>
-            <br>
-          </div>
             </div>
+            <div class="pilot">
+                <div class="input-1">
+                    <input type="radio" id="with_pilot" name="pilot" value="yes">
+                    <label for="with_pilot" >Yes</label>
+                </div>
+                <div class="input-1">
+                    <input type="radio" id="without_pilot" name="pilot" value="no">
+                    <label for="without_pilot" >No </label>
+                </div>
+                <br>
+              </div>
           <button class="search" onclick="book_now()">Book Now</button>
           <div id="myModal1" class="modal">
             <div class="modal-content">
